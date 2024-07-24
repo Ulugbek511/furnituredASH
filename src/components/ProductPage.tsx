@@ -85,7 +85,7 @@ const ProductsPage = () => {
 
     try {
       const response = await axios.put(
-        `https://ecommerce-backend-fawn-eight.vercel.app/api/products/${selectProduct._id}`,
+        `https://66a0f0557053166bcabd6c0a.mockapi.io/exam/v1/Dashboard/${selectProduct._id}`,
         data,
         { headers: headers }
       );
@@ -120,7 +120,7 @@ const ProductsPage = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('https://ecommerce-backend-fawn-eight.vercel.app/api/products');
+        const response = await axios.get('https://66a0f0557053166bcabd6c0a.mockapi.io/exam/v1/Dashboard');
         console.log(response.data);
       } catch (error) {
         console.error(error);
@@ -153,7 +153,7 @@ const ProductsPage = () => {
         size: form.size,
         color: form.color
       }
-      const response = await axios.post('https://ecommerce-backend-fawn-eight.vercel.app/api/products', data, {
+      const response = await axios.post('https://66a0f0557053166bcabd6c0a.mockapi.io/exam/v1/Dashboard', data, {
         headers: headers
       });
       if(response.data) {
@@ -171,7 +171,7 @@ const ProductsPage = () => {
       const headers = {
         Authorization: token,
       }
-      const response = await axios.delete(`https://ecommerce-backend-fawn-eight.vercel.app/api/products/${id}`, {
+      const response = await axios.delete(`https://66a0f0557053166bcabd6c0a.mockapi.io/exam/v1/Dashboard/${id}`, {
         headers: headers
       })
       if(response.data) {

@@ -25,7 +25,7 @@ export interface IProductState {
   }
 
 export const fetchProduct = createAsyncThunk('products-fetch', async () => {
-    const response = await axios.get("https://ecommerce-backend-fawn-eight.vercel.app/api/products");
+    const response = await axios.get("https://66a0f0557053166bcabd6c0a.mockapi.io/exam/v1/Dashboard");
     return response.data;
 })
 
